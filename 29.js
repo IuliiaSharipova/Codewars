@@ -1,3 +1,4 @@
+
 /*Exclusive "or" (xor) Logical Operator
 Overview
 In some scripting languages like PHP, there exists a logical operator (e.g. &&, ||, and, or, etc.) called
