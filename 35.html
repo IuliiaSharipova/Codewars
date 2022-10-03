@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>35</title>
+</head>
+<body>
+<p>
+    Switch/Case - Bug Fixing #6
+    Oh no! Timmy's evalObject function doesn't work. He uses Switch/Cases to evaluate the given properties of an object,
+    can you fix timmy's function?
+</p>
+<script>
+    console.log('solution')
+
+    function evalObject(value) {
+        switch (value.operation) {
+            case'+': return value.a + value.b;
+            case'-': return value.a - value.b;
+            case'/': return value.a / value.b;
+            case'*': return value.a * value.b;
+            case'%': return value.a % value.b;
+            case'^': return Math.pow(value.a, value.b);
+        }
+    }
+
+    console.log(evalObject({a: 1, b: 1, operation: '+'}))
+</script>
+</body>
+</html>
