@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04</title>
+</head>
+<body>
+<p>
+    Create a function that takes an integer as an argument and returns
+    "Even" for even numbers or "Odd" for odd numbers.
+</p>
+<script>
+    console.log('solution')
+
+    function even_or_odd(number) {
+        if (number / 2 - Math.floor(number / 2) == 0) {
+            return 'Even';
+        } else {
+            return 'Odd';
+        }
+    }
+
+    console.log(even_or_odd(-7))
+
+    //test result:
+
+    /*const chai = require('chai');
+    const assert = chai.assert;
+
+    describe('Sample tests', () => {
+        it('2 is even', () => {
+            assert.strictEqual(even_or_odd(2), 'Even');
+        });
+        it('7 is odd', () => {
+            assert.strictEqual(even_or_odd(7), 'Odd');
+        });
+        it('-42 is even', () => {
+            assert.strictEqual(even_or_odd(-42), 'Even');
+        });
+        it('-7 is odd', () => {
+            assert.strictEqual(even_or_odd(-7), 'Odd');
+        });
+        it('0 is even', () => {
+            assert.strictEqual(even_or_odd(0), 'Even');
+        });
+    });*/
+
+</script>
+</body>
+</html>

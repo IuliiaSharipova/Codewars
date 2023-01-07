@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>20</title>
+</head>
+<body>
+<p>
+    Write a function that returns a string in which firstname is swapped
+    with last name.
+
+    Example(Input --> Output)
+
+    "john McClane" --> "McClane john"
+
+</p>
+
+<script>
+    console.log('solution')
+
+    function nameShuffler(str) {
+        return str.split(' ').reverse().join(' ');
+    }
+
+    console.log(nameShuffler('john McClane'))
+    //Test:
+    /*describe('Tests', () => {
+        it('test', () => {
+            Test.assertEquals(nameShuffler('john McClane'), 'McClane john');
+        });
+    });*/
+
+</script>

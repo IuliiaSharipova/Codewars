@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06</title>
+</head>
+<body>
+<p>
+    The code provided is supposed replace all the dots . in the specified
+    String str with dashes -
+    But it's not working properly.
+    Task:
+    Fix the bug so we can all go home early.
+    Notes:
+    String str will never be null.
+</p>
+<script>
+    console.log('solution')
+    const replaceDots = function (str) {
+        return str.replace(/\./g, '-');
+    };
+    console.log(replaceDots('one.two.three'))
+    //test result:
+    /*describe('Example Tests', function() {
+        it('test dots', function() {
+            Test.assertEquals(replaceDots('one.two.three'), 'one-two-three', 'Sorry, try again :-(');
+        });
+    });*/
+</script>
+</body>
+</html>

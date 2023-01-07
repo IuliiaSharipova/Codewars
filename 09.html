@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>09</title>
+</head>
+<body>
+<p>
+    Write a function called repeatStr which repeats the given string exactly n times.
+    repeatStr(6, "I") // "IIIIII"
+    repeatStr(5, "Hello") // "HelloHelloHelloHelloHello"
+</p>
+
+<script>
+    console.log('solution')
+    function repeatStr(n, s) {
+        return s.repeat(n);
+    }
+
+    console.log(repeatStr(3, '*'))
+    //OR:
+    /*function repeatStr(n, s) {
+        let i = 0;
+        let result = '';
+        while (i < n) {
+            result += s;
+            i++;
+        }
+        return result;
+    }*/
+
+    //Test results:
+    /*describe('Tests', function() {
+        it('Basic tests', function() {
+            Test.assertSimilar(repeatStr(3, '*'), '***');
+            Test.assertSimilar(repeatStr(5, '#'), '#####');
+            Test.assertSimilar(repeatStr(2, 'ha '), 'ha ha ');
+        });
+    });
+*/
+</script>
+</body>
+</html>
