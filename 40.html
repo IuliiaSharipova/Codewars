@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>40</title>
+</head>
+<body>
+<p>
+    Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
+</p>
+<script>
+    console.log('solution')
+
+    function removeExclamationMarks(s) {
+        return s.replaceAll('!', '');
+    }
+
+    console.log(removeExclamationMarks('I w!!ant !!!! to be hap!!py!!!'))
+    //Test:
+    /* const chai = require("chai");
+     const assert = chai.assert;
+     chai.config.truncateThreshold=0;
+
+     describe("Tests", () => {
+         it("test", () => {
+             assert.strictEqual(removeExclamationMarks("Hello World!"), "Hello World");
+         });
+     });*/
+
+</script>
+</body>
+</html>
