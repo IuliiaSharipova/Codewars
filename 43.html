@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>43</title>
+</head>
+<body>
+<p>
+    I have a cat and a dog.
+    I got them at the same time as kitten/puppy. That was humanYears years ago.
+    Return their respective ages now as [humanYears,catYears,dogYears]
+
+    NOTES:
+
+    humanYears >= 1
+    humanYears are whole numbers only
+
+    Cat Years
+    15 cat years for first year
+    +9 cat years for second year
+    +4 cat years for each year after that
+
+    Dog Years
+    15 dog years for first year
+    +9 dog years for second year
+    +5 dog years for each year after that
+</p>
+<script>
+    console.log('solution')
+
+    /*const humanYearsCatYearsDogYears = function (humanYears) {
+        let catYears = 15;
+        let dogYears = 15;
+        switch (humanYears) {
+            case 1:
+                return [humanYears, catYears, dogYears];
+            case 2:
+                catYears += 9;
+                dogYears += 9;
+                return [humanYears, catYears, dogYears]
+            default:
+                return [humanYears, (humanYears - 2) * 4 + 24, (humanYears - 2) * 5 + 24]
+        }
+    }*/
+
+    const humanYearsCatYearsDogYears = x => x === 1 ? [1, 15, 15] : x === 2 ? [2, 24, 24] : [x, 24 + (4 * (x - 2)), 24 + (5 * (x - 2))];
+
+    console.log(humanYearsCatYearsDogYears(10))
+    console.log(humanYearsCatYearsDogYears(1))
+    console.log(humanYearsCatYearsDogYears(2))
+
+    //Test:
+    const Test = require('@codewars/test-compat');
+
+    describe("Example Tests", function () {
+
+        it("one", function () {
+            Test.assertSimilar(humanYearsCatYearsDogYears(1), [1, 15, 15]);
+        });
+
+        it("two", function () {
+            Test.assertSimilar(humanYearsCatYearsDogYears(2), [2, 24, 24]);
+        });
+
+        it("ten", function () {
+            Test.assertSimilar(humanYearsCatYearsDogYears(10), [10, 56, 64]);
+        });
+
+    });
+
+
+</script>
+</body>
+</html>
