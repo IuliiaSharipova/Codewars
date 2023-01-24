@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>50</title>
+</head>
+<body>
+<p>
+    This kata is about multiplying a given number by eight if it is an even number and by nine otherwise.
+</p>
+<script>
+    console.log('solution')
+
+    function simpleMultiplication(number) {
+        return (number % 2 === 0) ? 8 * number : 9 * number
+    }
+
+    console.log(simpleMultiplication(2))
+    console.log(simpleMultiplication(8))
+    console.log(simpleMultiplication(1))
+
+    //Test:
+    /*const chai = require("chai");
+    const assert = chai.assert;
+    chai.config.truncateThreshold=0;
+
+    describe("Basic Tests", () => {
+        it("Testing for fixed tests", () => {
+            assert.strictEqual(simpleMultiplication(2),16,'Should return given argument times eight...')
+            assert.strictEqual(simpleMultiplication(1),9, 'Should return given argument times nine...')
+            assert.strictEqual(simpleMultiplication(8),64,'Should return given argument times eight...')
+            assert.strictEqual(simpleMultiplication(4),32,'Should return given argument times eight...')
+            assert.strictEqual(simpleMultiplication(5),45,'Should return given argument times nine...')
+        });
+    });*/
+</script>
+</body>
+</html>
