@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>51</title>
+</head>
+<body>
+<p>
+    Create a function called shortcut to remove the lowercase vowels (a, e, i, o, u ) in a given string.
+
+    Examples
+    "hello" --> "hll"
+    "codewars" --> "cdwrs"
+    "goodbye" --> "gdby"
+    "HELLO" --> "HELLO"
+
+    don't worry about uppercase vowels
+    y is not considered a vowel for this kata
+</p>
+<script>
+    console.log('solution')
+
+    function shortcut(string) {
+        const lettersToRemove = ['a', 'e', 'i', 'o', 'u']
+        for (let i = 0; i <= lettersToRemove.length; i++) {
+            string = string.replaceAll(lettersToRemove[i], '')
+        }
+        return string
+    }
+
+    console.log(shortcut('hello'))
+    console.log(shortcut('goodbye'))
+    console.log(shortcut('HELLO'))
+    //Test:
+    /*const strictEqual = require('chai').assert.strictEqual;
+
+    function doTest (input, expected) {
+        const actual = shortcut(input);
+        strictEqual(actual, expected, `for "${input}":\n`);
+    }
+
+    describe("Sample Tests", () => {
+        it("Should pass sample tests", () => {
+            doTest('hello', 'hll');
+            doTest('how are you today?', 'hw r y tdy?');
+            doTest('complain', 'cmpln');
+            doTest('never', 'nvr');
+        });
+    });*/
+</script>
+</body>
+</html>
