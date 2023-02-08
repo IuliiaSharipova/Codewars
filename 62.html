@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>62</title>
+</head>
+<body>
+<p>
+    Write a function that returns the number of occurrences of an element in an array.
+
+    This function will be defined as a property of Array with the help of the method Object.defineProperty, which allows
+    to define a new method directly on the object (more info about that you can find on MDN).
+
+    Examples
+    var arr = [0, 1, 2, 2, 3];
+    arr.numberOfOccurrences(0) === 1;
+    arr.numberOfOccurrences(4) === 0;
+    arr.numberOfOccurrences(2) === 2;
+    arr.numberOfOccurrences(3) === 1;
+</p>
+<script>
+    console.log('solution')
+    Object.defineProperty(Array.prototype, 'numberOfOccurrences', {
+        value: function numberOfOccurrences(n) {
+            let res = 0
+            for (let i = 0; i < this.length; i++) {
+                if (n === this[i]) {
+                    res++
+                }
+            }
+            return res
+        }
+    });
+    let arr = [0, 1, 2, 2, 3]
+    console.log(arr.numberOfOccurrences(4))
+    console.log(arr.numberOfOccurrences(0))
+    console.log(arr.numberOfOccurrences(2))
+    console.log(arr.numberOfOccurrences(3))
+    //Test:
+    /* const chai = require('chai');
+     const assert = chai.assert;
+
+     describe("Number of Occurrences", () => {
+         it("Sample tests", () => {
+             let arr = [0, 1, 2, 2, 3];
+             assert.strictEqual(arr.slice().numberOfOccurrences(0), 1, `Incorrect answer for 0, arr = [0, 1, 2, 2, 3]`);
+             assert.strictEqual(arr.slice().numberOfOccurrences(4), 0, `Incorrect answer for 4, arr = [0, 1, 2, 2, 3]`);
+             assert.strictEqual(arr.slice().numberOfOccurrences(2), 2, `Incorrect answer for 2, arr = [0, 1, 2, 2, 3]`);
+             assert.strictEqual(arr.slice().numberOfOccurrences(3), 1, `Incorrect answer for 3, arr = [0, 1, 2, 2, 3]`);
+         });
+     });*/
+
+</script>
+</body>
+</html>
