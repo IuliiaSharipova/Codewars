@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>63</title>
+</head>
+<body>
+<p>
+    Return the number (count) of vowels in the given string.
+
+    We will consider a, e, i, o, u as vowels for this Kata (but not y).
+
+    The input string will only consist of lower case letters and/or spaces.
+</p>
+<script>
+    console.log('solution')
+    let vowels = ['a', 'e', 'i', 'o', 'u']
+
+    function getCount(str) {
+        let res = 0
+        let strToArray = str.split('')
+        for (let i = 0; i < strToArray.length; i++) {
+            if (vowels.includes(strToArray[i])) {
+                res++
+            }
+        }
+        return res
+    }
+
+    //OR:
+    /*  function getCount(str) {
+          return str.split('').reduce((acc, x) => 'aeiou'.includes(x) ? acc + 1 : acc, 0)
+      }*/
+
+    console.log(getCount("abracadabra"))//5
+    //Test:
+    /* const {assert} = require("chai");
+
+     describe("Vowels Count Tests",function(){
+         it("should return 5 for 'abracadabra'",function(){
+             assert.strictEqual(getCount("abracadabra"), 5) ;
+         });
+     });*/
+</script>
+</body>
+</html>
