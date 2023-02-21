@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>83</title>
+</head>
+<body>
+<p>
+    You will be given an array of objects representing data about developers who have signed up to attend the next
+    coding meetup that you are organising.
+    Write a function that adds the question property to each object in the input array where the developer has not
+    provided the relevant details (marked with a null value in JavaScript, with the default value in COBOL). The value
+    of the question property should be the following string:
+    Hi, could you please provide your
+    <property name>. and returns only the developers with missing details.
+
+        Notes:
+        At most only one of the values will be null / empty.
+        Preserve the order of the original list.
+        Return an empty array [] if there is no developer with missing details.
+        The input array will always be valid and formatted as in the example above.
+
+</p>
+</body>
+</html>
+
+
+<script>
+    console.log('solution')
+    const list1 = [
+        { firstName: null, lastName: 'I.', country: 'Argentina', continent: 'Americas', age: 35, language: 'Java' },
+        { firstName: 'Lukas', lastName: 'X.', country: 'Croatia', continent: 'Europe', age: 35, language: null },
+        { firstName: 'Madison', lastName: 'U.', country: 'United States', continent: 'Americas', age: 32, language: 'Ruby' }
+    ];
+    const list2 = [
+        { firstName: 'Sofia', lastName: 'I.', country: 'Argentina', continent: 'Americas', age: 35, language: 'Java' },
+        { firstName: 'Lukas', lastName: 'X.', country: 'Croatia', continent: 'Europe', age: 35, language: 'Python' },
+        { firstName: 'Madison', lastName: 'U.', country: 'United States', continent: 'Americas', age: 32, language: 'Ruby' }
+    ];
+    const askForMissingDetails = list =>
+        list.filter(dev =>
+            Object.keys(dev).some(key =>
+                dev[key] === null && (dev.question = `Hi, could you please provide your ${key}.`)));
+    //OR:
+    /*function askForMissingDetails(list) {
+        if (list.every(dev =>Object.values(dev).every(propValue=>propValue !== null))) {
+            return []
+        } else {
+            const nullList=list.filter(dev=>Object.values(dev).some(propValue=>propValue === null ))
+            return nullList.map(dev => ({
+                ...dev,
+                question:
+                       (dev.firstName === null  && 'Hi, could you please provide your firstName.')
+                    || (dev.lastName === null  && 'Hi, could you please provide your lastName.')
+                    || (dev.country === null  && 'Hi, could you please provide your country.')
+                    || (dev.continent === null && 'Hi, could you please provide your continent.')
+                    || (dev.age === null  && 'Hi, could you please provide your age.')
+                    || (dev.language === null  && 'Hi, could you please provide your language.')
+            }))
+        }
+    }*/
+    console.log(askForMissingDetails(list1))
+    console.log(askForMissingDetails(list2))
+</script>

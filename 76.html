@@ -53,7 +53,7 @@
         {firstName:'Amar',lastName: 'V.',country: 'Bosnia and Herzegovina',continent:'Europe',age: 32,language: 'Ruby'},
     ];
 
-    function isAgeDiverse(list) {
+    /*function isAgeDiverse(list) {
         const ageList = list.map(dev => dev.age)
         if (
             ageList.some(age => (age >= 0 && age < 20)) &&
@@ -71,6 +71,14 @@
         } else {
             return false
         }
+    }*/
+    function isAgeDiverse(list) {
+        let ageDev = list.map(el => {
+            if (el.age >= 100) return 10
+            return Math.floor(el.age / 10)
+        }).filter(el => el >= 1)
+
+        return new Set([...ageDev]).size === 10
     }
 
     console.log(isAgeDiverse(list1))
