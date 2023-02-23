@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>91</title>
+</head>
+<body>
+<p>
+    Write two functions, which return difference and same values oa two arrays.
+</p>
+</body>
+</html>
+
+
+<script>
+    console.log('solution')
+    let arr1 = [1, 2, 3, 45, 58, 65]
+    let arr2 = [1, 2, 3, 45, 5]
+
+    let findSameArrayElements = (arr1, arr2) => {
+        let sameElementArray = []
+        for (let i = 0; i < arr1.length; i++) {
+            for (let j = 0; j < arr2.length; j++) {
+                if (arr1[i] === arr2[j]) {
+                    sameElementArray.push(arr1[i])
+                }
+            }
+        }
+        return sameElementArray
+    }
+    console.log(findSameArrayElements(arr1, arr2))
+
+
+    let findArrayDifference = (arr1, arr2) => arr1.filter(el => !arr2.includes(el))
+    console.log(findArrayDifference(arr1, arr2))
+</script>
