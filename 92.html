@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>92 Get the mean of an array</title>
+</head>
+<body>
+<p>
+    It's the academic year's end, fateful moment of your school report. The averages must be calculated. All the
+    students come to you and entreat you to calculate their average for them. Easy ! You just need to write a script.
+    Return the average of the given array rounded down to its nearest integer.
+    The array will never be empty.
+</p>
+</body>
+</html>
+
+
+<script>
+    console.log('solution')
+
+    function getAverage(marks) {
+        return Math.floor(marks.reduce((acc, el) => (acc + el), 0) / marks.length)
+    }
+
+    console.log(getAverage([1, 2, 3, 4, 5]))
+</script>

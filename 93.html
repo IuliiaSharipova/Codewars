@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>93 Largest Elements
+    </title>
+</head>
+<body>
+<p>
+    Write a program that outputs the top n elements from a list.
+    Example:
+
+    largest(2, [7,6,5,4,3,2,1])// => [6,7]
+</p>
+</body>
+</html>
+
+
+<script>
+    console.log('solution')
+
+    function largest(n, array) {
+        return n === 0 ? [] : array.sort((a, b) => a - b).slice(-n);
+    }
+
+    console.log(largest(2, [7, 6, 5, 4, 3, 2, 1]))
+    console.log(largest(0, [1, 2, 3, 4, 8, 7, 6, 5]))
+</script>
