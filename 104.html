@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>104 Enumerable Magic #1 - True for All?</title>
+</head>
+<body>
+<p>
+    Create a method all which takes two params:
+    a sequence
+    a function (function pointer in C)
+    and returns true if the function in the params returns true for every element in the sequence. Otherwise, it should
+    return false. If the sequence is empty, it should return true, since technically nothing failed the test.
+
+    Example
+    all((1, 2, 3, 4, 5), greater_than_9) -> false
+    all((1, 2, 3, 4, 5), less_than_9) -> True
+</p>
+</body>
+</html>
+
+
+<script>
+    console.log('solution')
+   /* function all( arr, fun ){
+        const resObj=new Set([...arr.map(el=>!!(el && fun(el)))])
+        if (arr.length===0) return true
+        return resObj.size===1 ? resObj.values().next().value :false
+    }*/
+    //OR:
+    function all( arr, fun ){
+        return arr.every(fun)
+    }
+    console.log(all([1,2,3,4,5], function(v){return v<9}))
+    console.log(all([1,2,3,4,25], function(v){return v<10}))
+    console.log(all([1,2,3,4,5], function(v){return v>9}))
+    console.log(all([], function(v){return v>9}))
+</script>
