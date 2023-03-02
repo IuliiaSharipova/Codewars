@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>106 Sentence Smash</title>
+</head>
+<body>
+<p>
+    Write a function that takes an array of words and smashes them together into a sentence and returns the sentence.
+    You can ignore any need to sanitize words or add punctuation, but you should add spaces between each word. Be
+    careful, there shouldn't be a space at the beginning or the end of the sentence!
+
+    Example:
+    ['hello', 'world', 'this', 'is', 'great'] => 'hello world this is great'
+</p>
+</body>
+</html>
+
+
+<script>
+    console.log('solution')
+    function smash (words) {
+        return words.join(' ')
+    };
+    console.log(smash(["hello", "amazing", "world"]))
+</script>
