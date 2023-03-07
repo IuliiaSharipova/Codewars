@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>109 Is there a vowel in there?</title>
+</head>
+<body>
+<p>
+    Given an array of numbers, check if any of the numbers are the character codes for lower case vowels (a, e, i, o,u).
+    If they are, change the array value to a string of that vowel.
+    Return the resulting array.
+</p>
+</body>
+</html>
+
+
+<script>
+    console.log('solution')
+
+    function isVow(a) {
+        ['a', 'e', 'i', 'o', 'u'].map(el => {
+            for (let i = 0; i < a.length; i++) {
+                if (a[i] === el.charCodeAt(0)) {
+                    a[i] = el
+                }
+            }
+        })
+        return a
+    }
+
+    console.log(isVow([101, 121, 110, 113, 113, 103, 121, 121, 101, 107, 103]))
+</script>
