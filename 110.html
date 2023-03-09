@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>110 Calculate average</title>
+</head>
+<body>
+<p>
+    Write a function which calculates the average of the numbers in a given list.
+    Note: Empty arrays should return 0.
+</p>
+</body>
+</html>
+
+
+<script>
+    console.log('solution')
+
+    function findAverage(array) {
+        return array.length ? array.reduce((acc, el) => acc + el, 0) / array.length : 0;
+    }
+
+    console.log(findAverage([1,2,3,4]))
+</script>
